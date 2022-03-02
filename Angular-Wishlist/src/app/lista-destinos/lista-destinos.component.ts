@@ -1,4 +1,5 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DestinoViaje } from './../models/destino-viaje.model';
 
 @Component({
   selector: 'app-lista-destinos',
@@ -7,11 +8,15 @@ import { Component, OnInit, Input} from '@angular/core';
 })
 export class ListaDestinosComponent implements OnInit {
   @Input() destinos: string[];
+
   constructor() {
-    this.destinos = ['Barcelona', 'Buenos Aires', 'Lima', 'Bogota'];
+    this.destinos = [];
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {}
 
+  guardar(nombre: string, url: string): boolean{
+    console.log(new DestinoViaje(nombre, url));
+    return false;
+  }
 }

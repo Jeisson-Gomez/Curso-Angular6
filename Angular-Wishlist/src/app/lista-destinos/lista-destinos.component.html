@@ -23,7 +23,7 @@
               <input type="text" class="form-control" id="imagenUrl" placeholder="Ingrese la url" #url>
             </div>
 
-            <button type="submit" class="btn btn-primary">Guardar!</button>
+            <button type="submit" class="btn btn-primary" (click)="guardar(nombre.value, url.value)">Guardar!</button>
           </form>
         </div>
       </div>
